@@ -9,10 +9,16 @@ readme = "README.md"
 authors = [
     {name = "Dmitry Sorokin", email = "dmd40in@gmail.com"},
 ]
-dependencies = ["click"]
+dependencies = [
+    "click",
+    "cookiecutter"
+]
 
 [project.scripts]
 dimed = "dimed.cli:cli"
+
+[tool.setuptools]
+include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["src"]

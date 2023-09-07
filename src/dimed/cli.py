@@ -1,4 +1,6 @@
 import click
+import cookiecutter.main
+import pkg_resources
 
 @click.group()
 def cli():
@@ -16,6 +18,11 @@ def retired(age):
     """When will you be retired"""
     click.echo(f'You will be retired in {60-age} years')
 
+@cli.command()
+def template():
+    """Generate a project from template."""
+    template_path = pkg_resources.resource_filename(__name__, "template")
+    cookiecutter.main.cookiecutter(template_path)
+
 if __name__ == '__main__':
     cli()
-    
