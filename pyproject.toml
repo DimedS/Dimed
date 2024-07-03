@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 
 [project]
 name = "dimed"
-version = "0.1"
+version = "0.2"
 description = "Dimed for CLI and packaging"
 readme = "README.md"
 authors = [
@@ -11,7 +11,8 @@ authors = [
 ]
 dependencies = [
     "click",
-    "cookiecutter"
+    "cookiecutter",
+    "dimed-2",
 ]
 
 [project.scripts]
